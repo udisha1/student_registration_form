@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Student Registration</h2>
+        
+        <!-- Registration Form -->
+        <form id="regForm">
+            
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <!-- type="email" automatically checks for the '@' symbol -->
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <!-- pattern enforces exactly 10 digits (0-9) -->
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" title="Please enter exactly 10 digits" placeholder="1234567890" required>
+            </div>
+
+            <div class="form-group">
+                <label for="branch">Branch</label>
+                <!-- First option has value="" so 'required' forces a selection -->
+                <select id="branch" name="branch" required>
+                    <option value="">-- Select Branch --</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Mechanical">Mechanical Engineering</option>
+                    <option value="Civil">Civil Engineering</option>
+                    <option value="Electrical">Electrical Engineering</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <!-- minlength="6" ensures at least 6 characters are entered -->
+                <input type="password" id="password" name="password" minlength="6" placeholder="Min. 6 characters" required>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
