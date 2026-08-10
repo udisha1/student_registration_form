@@ -13,7 +13,6 @@ else{
 }
 
 
-// TC-02 : Check style.css
 if(fs.existsSync("css/style.css")){
     console.log("TC-02 : style.css exists : PASS");
 }
@@ -40,14 +39,12 @@ else{
     passed = false;
 }
 
-// Read JSON
 const students = JSON.parse(
     fs.readFileSync("data/students.json")
 );
 
 const student = students[0];
 
-// TC-05 : Name Validation
 if(student.name.trim() !== ""){
     console.log("TC-05 : Name Validation : PASS");
 }
@@ -56,7 +53,6 @@ else{
     passed = false;
 }
 
-// TC-06 : Email Validation
 if(student.email.includes("@")){
     console.log("TC-06 : Email Validation : PASS");
 }
@@ -65,7 +61,6 @@ else{
     passed = false;
 }
 
-// TC-07 : Mobile Validation
 if(student.mobile.length === 10){
     console.log("TC-07 : Mobile Validation : PASS");
 }
@@ -74,7 +69,7 @@ else{
     passed = false;
 }
 
-// TC-08 : Branch Validation
+
 
 if(student.branch !== ""){
     console.log("TC-08 : Branch Validation : PASS");
@@ -84,7 +79,6 @@ else{
     passed = false;
 }
 
-// TC-09 : Password Validation
 if(student.password.length >= 6){
     console.log("TC-09 : Password Validation : PASS");
 }
@@ -93,7 +87,7 @@ else{
     passed = false;
 }
 
-// TC-10 : Registration Successful
+
 if(passed){
     console.log("TC-10 : Registration Successful : PASS");
     console.log("\nBuild SUCCESS");
