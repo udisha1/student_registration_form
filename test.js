@@ -31,7 +31,7 @@ else{
     passed = false;
 }
 // TC-04 : Check students.json
-if(fs.existsSync("data/students.json")){
+if(fs.existsSync("data/student.json")){
     console.log("TC-04 : students.json exists : PASS");
 }
 else{
